@@ -3,14 +3,13 @@
 const knex = require('knex') ({
     client: 'mysql2',
     connection: {
-      host : 'localhost',
+      host : '127.0.0.1',
       user : 'root',
       port : '3306',
-      password : 'gonzi039491',
+      password : '',
       database : 'glindumentaria'
     },
 
-   // pool: { min: 0, max: 7 }
   });
 
   knex.schema.hasTable('formulario').then(function(exists) {
@@ -29,5 +28,4 @@ const knex = require('knex') ({
     }
   });
 
-   // ----Modulos------------------------
    module.exports = knex;

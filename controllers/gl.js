@@ -2,15 +2,15 @@ const knex = require('../db/config');
 
 const nomina = ( (req,res)=>{
     knex
-    .from('glindumentaria')
+    .from('formulario')
     .then((json)=>{
         res.send({data:json})
     })
 });
-// --------buscar-adonde----select-where---------------------------------
+
 const buscar = ( (req,res)=>{
    knex
-   .from('glindumentaria')
+   .from('formulario')
    .where('id',req.params.id) 
    .then((json)=>{
        res.send({data:json})
@@ -20,14 +20,14 @@ const buscar = ( (req,res)=>{
 
 const insertar = ( (req,res)=>{
     let data = {
-         nombre : req.body.nombre,
+        nombre: req.body.nombre,
         email: req.body.email,
-        telefono:req.body.telefono,
+        telefono: req.body.telefono,
         localidad: req.body.edad,
         mensaje: req.body.mensaje, 
 
     }
-    knex('glindumentaria')
+    knex('formulario')
     .insert(data)
     .then(()=>{
        res.send('Dato Insertado')
@@ -35,16 +35,8 @@ const insertar = ( (req,res)=>{
     .catch(error => console.log(error)); 
    })
 
-   const borrar = ( (req,res)=>{
-    knex('glindumentaria')
-    .where({id: req.params.id}) 
-    .delete()
-     .then(()=>{ res.send( 'Dato borrado')})
-     .catch(error => console.log(error));
-  });
-
-  const actualizar = ( (req,res)=>{
-    knex('comicForm')
+   const actualizar = ( (req,res)=>{
+    knex('formulario')
     .where({id: req.params.id}) 
     .update({
 
@@ -58,7 +50,15 @@ const insertar = ( (req,res)=>{
     .catch(error => console.log(error));
 });
 
- //----exportar--modulos-----------------------
+   const borrar = ( (req,res)=>{
+    knex('formulario')
+    .where({id: req.params.id}) 
+    .delete()
+     .then(()=>{ res.send( 'Dato borrado')})
+     .catch(error => console.log(error));
+  });
+
+
  module.exports = {
     nomina,
     insertar,

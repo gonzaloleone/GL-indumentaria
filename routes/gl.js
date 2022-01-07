@@ -8,11 +8,11 @@ const router = Router ();
      borrar,
      actualizar,
  } = require ('../controllers/gl'); 
-//-----------------------------------
+
 router.get ('/nomina', nomina );
 router.get ('/buscar/:id', buscar);
 router.post ('/insertar', insertar);
 router.put ('/actualizar/:id',actualizar);
 router.delete ('/borrar/:id', borrar);
-//----exportar---modulos--------
+
 module.exports =  router;
