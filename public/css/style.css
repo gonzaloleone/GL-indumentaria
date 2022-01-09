@@ -327,14 +327,19 @@ label{
         font-size: 0.7em;
     }
 
+    .contact{
+        height: 55px;
+    }
+
     .contact p{
-        font-size: 0.5em;
-        margin-top: 30px;
+        font-size: 0.45em;
+        margin-top: 20px;
         font-weight: bold;
     }
 
     .contact img{
-        width: 70px;
+        width: 45px;
+        height: 45px;
         margin-bottom: 10px;
     }
 
@@ -344,15 +349,15 @@ label{
     }
 
     .gl{
-        font-size: 2.7em;
+        font-size: 2.5em;
     }
 
     .ind{
-        font-size: 2.7em;
+        font-size: 2.5em;
     }
 
     .rop{
-        font-size: 1em;  
+        font-size: 0.8em;  
     }
 
     .p p{
@@ -456,6 +461,10 @@ label{
         font-size: 0.9em;
     }
 
+    .contact{
+        height: 160px;
+    }
+
     .contact p{
         font-size: 0.7em;
         margin-top: 70px;
@@ -464,6 +473,7 @@ label{
 
     .contact img{
         width: 150px;
+        height: 150px;
         margin-bottom: 10px;
     }
 
